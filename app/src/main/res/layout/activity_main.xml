@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/images"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- App Title -->
+    <TextView
+        android:text="Migraine Care"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#006AD4"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Add Migraine Button -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:text="Add Migraine Data"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#153AC0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:padding="12dp" />
+
+    <!-- History Button -->
+    <Button
+        android:id="@+id/btnHistory"
+        android:text="View History"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#153AC0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:padding="12dp" />
+
+    <!-- Predict Button -->
+    <Button
+        android:id="@+id/btnPredict"
+        android:text="Predict Migraine Risk"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#153AC0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp" />
+
+</LinearLayout>

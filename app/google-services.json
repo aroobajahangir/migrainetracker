@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687279526982",
+    "project_id": "maigrainetracker-9d099",
+    "storage_bucket": "maigrainetracker-9d099.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687279526982:android:38dba2cbc10945822ce647",
+        "android_client_info": {
+          "package_name": "com.example.maigrainetracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAic4aUE1Vu8NrfebdLTtPexySR9OP9vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
