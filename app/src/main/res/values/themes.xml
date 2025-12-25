@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
     <style name="Base.Theme.MaigraineTracker" parent="Theme.Material3.DayNight.NoActionBar">
+=======
+    <style name="Base.Theme.Yourapp" parent="Theme.Material3.DayNight.NoActionBar">
+>>>>>>> c8ac07a5eb2790780bf427f3d3bcd94edd1d6412
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+<<<<<<< HEAD
     <style name="Theme.MaigraineTracker" parent="Base.Theme.MaigraineTracker" />
+=======
+    <style name="Theme.Yourapp" parent="Base.Theme.Yourapp" />
+>>>>>>> c8ac07a5eb2790780bf427f3d3bcd94edd1d6412
 </resources>
