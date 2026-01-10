@@ -1,11 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-<<<<<<< HEAD
-    <style name="Base.Theme.MaigraineTracker" parent="Theme.Material3.DayNight.NoActionBar">
-=======
-    <style name="Base.Theme.Yourapp" parent="Theme.Material3.DayNight.NoActionBar">
->>>>>>> c8ac07a5eb2790780bf427f3d3bcd94edd1d6412
+    <!-- Base application theme for Dark Mode. -->
+    <style name="Theme.MigraineTracker" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- <item name="colorPrimary">@color/purple_200</item> -->
     </style>
 </resources>

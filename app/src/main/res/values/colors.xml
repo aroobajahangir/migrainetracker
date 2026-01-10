@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Professional Dark Blue Splash Screen Colors -->
+    <color name="splash_gradient_start">#0D47A1</color> <!-- Dark Blue -->
+    <color name="splash_gradient_end">#1565C0</color>   <!-- Medium Dark Blue -->
+
+    <!-- Modern Gray Palette -->
+    <color name="app_background">#F5F5F5</color> <!-- Light Gray -->
+    <color name="text_primary">#212121</color>     <!-- Dark Gray -->
+    <color name="text_secondary">#757575</color>    <!-- Medium Gray -->
+    <color name="button_background">#424242</color>  <!-- Dark Gray -->
+    <color name="button_text">#FFFFFF</color>         <!-- White -->
+
+    <!-- Migraine Status Colors -->
+    <color name="status_high">#FF0000</color> <!-- Red -->
+    <color name="status_low">#008000</color>  <!-- Green -->
 </resources>

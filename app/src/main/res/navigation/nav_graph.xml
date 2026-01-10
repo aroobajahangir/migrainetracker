@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.maigrainetracker.ui.HomeFragment"
+        android:label="Migraine Tracker"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_log_migraine"
+        android:name="com.example.maigrainetracker.ui.LogMigraineFragment"
+        android:label="Log Migraine"
+        tools:layout="@layout/fragment_log_migraine" />
+
+    <fragment
+        android:id="@+id/navigation_treatment"
+        android:name="com.example.maigrainetracker.ui.TreatmentFragment"
+        android:label="Migraine Treatment"
+        tools:layout="@layout/fragment_treatment" />
+
+    <fragment
+        android:id="@+id/navigation_reminders"
+        android:name="com.example.maigrainetracker.ui.RemindersFragment"
+        android:label="Reminders"
+        tools:layout="@layout/fragment_reminders" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.maigrainetracker.ui.ChatFragment"
+        android:label="Chatbot"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.example.maigrainetracker.ui.StatsFragment"
+        android:label="Stats"
+        tools:layout="@layout/fragment_stats" />
+
+</navigation>

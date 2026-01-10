@@ -1,30 +1,41 @@
 package com.example.maigrainetracker;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.example.maigrainetracker.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAdd, btnHistory, btnPredict;
+    private ActivityMainBinding binding;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        btnAdd = findViewById(R.id.btnAdd);
-        btnHistory = findViewById(R.id.btnHistory);
-        btnPredict = findViewById(R.id.btnPredict);
+        setSupportActionBar(binding.toolbar);
 
-        btnAdd.setOnClickListener(v ->
-                startActivity(new Intent(this, AddMigraineActivity.class)));
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
 
-        btnHistory.setOnClickListener(v ->
-                startActivity(new Intent(this, HistoryActivity.class)));
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_log_migraine, R.id.navigation_treatment, R.id.navigation_reminders, R.id.navigation_chat, R.id.navigation_stats)
+                .build();
 
-        btnPredict.setOnClickListener(v ->
-                startActivity(new Intent(this, PredictActivity.class)));
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 }

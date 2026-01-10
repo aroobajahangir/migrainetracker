@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LogMigraineFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/tv_date_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date and Time"            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_date_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Select Date and Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_time_label" />
+
+        <!-- Pain Level -->
+        <TextView
+            android:id="@+id/tv_pain_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pain Level (1-10)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_date_time" />
+
+        <SeekBar
+            android:id="@+id/sb_pain_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pain_level_label" />
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/tv_duration_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Duration (in minutes)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_pain_level" />
+
+        <EditText
+            android:id="@+id/et_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter duration in minutes"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_duration_label" />
+
+        <!-- Migraine Type -->
+        <TextView
+            android:id="@+id/tv_migraine_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Migraine Type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_duration" />
+
+        <RadioGroup
+            android:id="@+id/rg_migraine_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_migraine_type_label">
+
+            <RadioButton
+                android:id="@+id/rb_aura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aura" />
+
+            <RadioButton
+                android:id="@+id/rb_no_aura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Aura" />
+        </RadioGroup>
+
+        <!-- Symptoms -->
+        <TextView
+            android:id="@+id/tv_symptoms_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Symptoms"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_migraine_type" />
+
+        <CheckBox
+            android:id="@+id/cb_nausea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nausea"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_symptoms_label" />
+
+        <CheckBox
+            android:id="@+id/cb_vomiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vomiting"
+            app:layout_constraintStart_toEndOf="@+id/cb_nausea"
+            app:layout_constraintTop_toTopOf="@+id/cb_nausea" />
+
+        <CheckBox
+            android:id="@+id/cb_light_sensitivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light Sensitivity"
+            app:layout_constraintStart_toEndOf="@+id/cb_vomiting"
+            app:layout_constraintTop_toTopOf="@+id/cb_vomiting" />
+
+        <CheckBox
+            android:id="@+id/cb_sound_sensitivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sound Sensitivity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_nausea" />
+
+        <CheckBox
+            android:id="@+id/cb_dizziness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dizziness"
+            app:layout_constraintStart_toEndOf="@+id/cb_sound_sensitivity"
+            app:layout_constraintTop_toTopOf="@+id/cb_sound_sensitivity" />
+
+        <!-- Triggers -->
+        <TextView
+            android:id="@+id/tv_triggers_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Triggers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_dizziness" />
+
+        <CheckBox
+            android:id="@+id/cb_stress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_triggers_label" />
+
+        <CheckBox
+            android:id="@+id/cb_sleep_deprivation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Deprivation"
+            app:layout_constraintStart_toEndOf="@+id/cb_stress"
+            app:layout_constraintTop_toTopOf="@+id/cb_stress" />
+
+        <CheckBox
+            android:id="@+id/cb_screen_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Screen Time"
+            app:layout_constraintStart_toEndOf="@+id/cb_sleep_deprivation"
+            app:layout_constraintTop_toTopOf="@+id/cb_sleep_deprivation" />
+
+        <CheckBox
+            android:id="@+id/cb_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_stress" />
+
+        <CheckBox
+            android:id="@+id/cb_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
+            app:layout_constraintStart_toEndOf="@+id/cb_coffee"
+            app:layout_constraintTop_toTopOf="@+id/cb_coffee" />
+
+        <CheckBox
+            android:id="@+id/cb_skipped_meals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skipped Meals"
+            app:layout_constraintStart_toEndOf="@+id/cb_chocolate"
+            app:layout_constraintTop_toTopOf="@+id/cb_chocolate" />
+
+        <!-- Notes -->
+        <TextView
+            android:id="@+id/tv_notes_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Notes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_skipped_meals" />
+
+        <EditText
+            android:id="@+id/et_notes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter any additional notes"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notes_label" />
+
+        <!-- Medication -->
+        <TextView
+            android:id="@+id/tv_medication_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Medication"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_notes" />
+
+        <EditText
+            android:id="@+id/et_medication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter medication taken"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_medication_label" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_medication" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

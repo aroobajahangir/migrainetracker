@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RemindersFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Water Reminder -->
+        <TextView
+            android:id="@+id/tv_water_reminder_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Reminder"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_water_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_water_reminder_label" />
+
+        <EditText
+            android:id="@+id/et_water_reminder_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Set time (e.g., 08:00)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_water_reminder_label" />
+
+        <!-- Sleep Reminder -->
+        <TextView
+            android:id="@+id/tv_sleep_reminder_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sleep Reminder"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_water_reminder_time" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_sleep_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_sleep_reminder_label" />
+
+        <EditText
+            android:id="@+id/et_sleep_reminder_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Set time (e.g., 22:00)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sleep_reminder_label" />
+
+        <!-- Meal Reminder -->
+        <TextView
+            android:id="@+id/tv_meal_reminder_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Night Meal Reminder"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_sleep_reminder_time" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_meal_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_meal_reminder_label" />
+
+        <EditText
+            android:id="@+id/et_meal_reminder_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Set time (e.g., 20:00)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_meal_reminder_label" />
+
+        <!-- Medicine Reminder -->
+        <TextView
+            android:id="@+id/tv_medicine_reminder_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Medicine Reminder"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_meal_reminder_time" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_medicine_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_medicine_reminder_label" />
+
+        <EditText
+            android:id="@+id/et_medicine_reminder_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Set time (e.g., 09:00)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_medicine_reminder_label" />
+
+        <Button
+            android:id="@+id/btn_save_reminders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Save Reminders"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_medicine_reminder_time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

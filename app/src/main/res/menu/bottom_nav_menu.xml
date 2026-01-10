@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_log_migraine"
+        android:icon="@drawable/ic_add_circle"
+        android:title="Log Migraine" />
+
+    <item
+        android:id="@+id/navigation_treatment"
+        android:icon="@drawable/ic_treatment"
+        android:title="Treatment" />
+
+    <item
+        android:id="@+id/navigation_reminders"
+        android:icon="@drawable/ic_reminders_alarm"
+        android:title="Reminders" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat_bubble"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/navigation_stats"
+        android:icon="@drawable/ic_stats_chart"
+        android:title="Stats" />
+
+</menu>
